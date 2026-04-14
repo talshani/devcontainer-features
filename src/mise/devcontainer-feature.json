@@ -1,9 +1,21 @@
 {
     "id": "mise",
     "name": "mise",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Installs mise-en-place version manager",
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils"
+    ],
+    "containerEnv": {
+        "MISE_DATA_DIR": "/mnt/mise-data",
+        "MISE_GLOBAL_CONFIG_FILE": "/mnt/mise-data/global-config.toml",
+        "MISE_TRUSTED_CONFIG_PATHS": "/workspaces"
+    },
+    "mounts": [
+        {
+            "source": "mise-data-volume",
+            "target": "/mnt/mise-data",
+            "type": "volume"
+        }
     ]
 }

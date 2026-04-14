@@ -44,4 +44,7 @@ EOF
 
 rm -rf /var/lib/apt/lists/*
 
+mkdir -p /mnt/mise-data
+chmod 0777 /mnt/mise-data
+
 echo "Done!"
