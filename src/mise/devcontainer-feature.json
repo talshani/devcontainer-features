@@ -1,7 +1,7 @@
 {
     "id": "mise",
     "name": "mise",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Installs mise-en-place version manager",
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils"
