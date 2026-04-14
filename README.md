@@ -17,6 +17,19 @@ Installs [mise-en-place](https://mise.jdx.dev/) via its official apt repository.
 }
 ```
 
+### `claude-code-base`
+
+Installs the [Claude Code](https://docs.claude.com/en/docs/claude-code/overview) CLI via Anthropic's official installer. The `claude` binary is placed at `/usr/local/bin/claude`. Auth and session state persist across rebuilds via a per-devcontainer Docker volume, pointed at by `CLAUDE_CONFIG_DIR`.
+
+```jsonc
+{
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "features": {
+        "ghcr.io/<owner>/<repo>/claude-code-base:1": {}
+    }
+}
+```
+
 ## Repo Structure
 
 Each Feature lives under `src/` in its own sub-folder, containing a `devcontainer-feature.json` and an `install.sh` entrypoint.
