@@ -1,4 +1,5 @@
 {
+    "id": "mise",
     "name": "mise",
     "version": "1.0.0",
     "description": "Installs mise-en-place version manager",
