@@ -7,12 +7,14 @@ Installs mise-en-place version manager
 
 ```json
 "features": {
-    "ghcr.io/<owner>/<repo>/mise:1": {}
+    "ghcr.io/talshani/devcontainer-features/mise:1": {}
 }
 ```
 
 
 
+
+
 ---
 
-_Note: This file is auto-generated on release from [devcontainer-feature.json](./devcontainer-feature.json)._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/talshani/devcontainer-features/blob/main/src/mise/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
