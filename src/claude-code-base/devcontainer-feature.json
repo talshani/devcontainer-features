@@ -1,7 +1,7 @@
 {
     "id": "claude-code-base",
     "name": "Claude Code",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Installs the Claude Code CLI (Anthropic) with a per-devcontainer persistent config/auth volume.",
     "containerEnv": {
         "CLAUDE_CONFIG_DIR": "/mnt/claude-code-data"

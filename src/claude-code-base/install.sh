@@ -43,6 +43,19 @@ fi
 mkdir -p /mnt/claude-code-data
 chmod 0777 /mnt/claude-code-data
 
+# Ensure ~/.local/bin is on PATH for every user. Claude Code's self-update
+# writes to $HOME/.local/bin/claude, and `claude doctor` warns when that
+# directory is not on PATH. The snippet is idempotent and harmless for users
+# who never invoke `claude`.
+cat > /etc/profile.d/claude-code-local-bin.sh <<'EOF'
+# Added by the claude-code-base devcontainer feature.
+case ":$PATH:" in
+    *":$HOME/.local/bin:"*) ;;
+    *) export PATH="$HOME/.local/bin:$PATH" ;;
+esac
+EOF
+chmod 0644 /etc/profile.d/claude-code-local-bin.sh
+
 rm -rf /var/lib/apt/lists/*
 
 echo "Done!"
