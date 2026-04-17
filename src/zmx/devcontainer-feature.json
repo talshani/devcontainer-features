@@ -1,0 +1,13 @@
+{
+    "id": "zmx",
+    "name": "zmx",
+    "version": "1.0.0",
+    "description": "Installs zmx (https://zmx.sh), a shell session persistence tool. Attach/detach from shell sessions without killing them; multiple clients can attach to the same session.",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "0.5.0",
+            "description": "zmx version to install. See https://zmx.sh for available versions."
+        }
+    }
+}
