@@ -30,6 +30,19 @@ Installs the [Claude Code](https://docs.claude.com/en/docs/claude-code/overview)
 }
 ```
 
+### `zmx`
+
+Installs [zmx](https://zmx.sh), a shell session persistence tool (attach/detach from shells, multi-client). A single static binary is placed at `/usr/local/bin/zmx`. Accepts an optional `version` input (defaults to the pinned version for the current feature release).
+
+```jsonc
+{
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "features": {
+        "ghcr.io/<owner>/<repo>/zmx:1": {}
+    }
+}
+```
+
 ## Repo Structure
 
 Each Feature lives under `src/` in its own sub-folder, containing a `devcontainer-feature.json` and an `install.sh` entrypoint.
