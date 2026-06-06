@@ -16,6 +16,7 @@ jobs:
           - mise
           - claude-code-base
           - zmx
+          - uv
         baseImage:
           - debian:latest
           - ubuntu:latest
@@ -38,6 +39,7 @@ jobs:
           - mise
           - claude-code-base
           - zmx
+          - uv
     steps:
       - uses: actions/checkout@v4
 
@@ -58,10 +60,13 @@ jobs:
       - name: "Write ad-hoc devcontainer.json"
         run: |
           mkdir -p .devcontainer
+          # Local features must resolve to a child of the .devcontainer/ folder,
+          # so copy the feature source under it and reference it relatively.
+          cp -R src/mise .devcontainer/mise
           cat > .devcontainer/devcontainer.json <<'EOF'
           {
               "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-              "features": { "./src/mise": {} }
+              "features": { "./mise": {} }
           }
           EOF
 
