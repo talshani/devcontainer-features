@@ -43,6 +43,19 @@ Installs [zmx](https://zmx.sh), a shell session persistence tool (attach/detach 
 }
 ```
 
+### `uv`
+
+Installs [uv](https://docs.astral.sh/uv), a fast Python package and project manager from Astral. The `uv` and `uvx` binaries are placed in `/usr/local/bin`. Accepts an optional `version` input (defaults to the pinned version for the current feature release, or `"latest"`).
+
+```jsonc
+{
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "features": {
+        "ghcr.io/<owner>/<repo>/uv:1": {}
+    }
+}
+```
+
 ## Repo Structure
 
 Each Feature lives under `src/` in its own sub-folder, containing a `devcontainer-feature.json` and an `install.sh` entrypoint.

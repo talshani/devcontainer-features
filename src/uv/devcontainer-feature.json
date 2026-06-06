@@ -1,0 +1,13 @@
+{
+    "id": "uv",
+    "name": "uv",
+    "version": "1.0.0",
+    "description": "Installs uv (https://docs.astral.sh/uv), an extremely fast Python package and project manager from Astral. Installs the `uv` and `uvx` binaries.",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "0.11.19",
+            "description": "uv version to install, or \"latest\" for the most recent release. See https://github.com/astral-sh/uv/releases for available versions."
+        }
+    }
+}
